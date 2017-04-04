@@ -15,7 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
+eimport javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
@@ -36,7 +36,7 @@ public class VentanaPrincipal extends JFrame implements MouseListener, KeyListen
     public VentanaPrincipal(){
         iniciarComponentes();
         setTitle("Cálculo de Redes");
-        setSize(500,300);
+s        setSize(500,300);
         setLocationRelativeTo(null);
         setVisible(true);
         setResizable(true);
@@ -57,7 +57,7 @@ public class VentanaPrincipal extends JFrame implements MouseListener, KeyListen
         panelIp.add(scrollInformacion = new JScrollPane(panelScroll = new JPanel()), BorderLayout.CENTER);
         FlowLayout flowLayoutTextos = new FlowLayout();
         panelTextos.setLayout(flowLayoutTextos);
-        panelTextos.add(textoX1 = new JTextField(2));
+l        panelTextos.add(textoX1 = new JTextField(2));
         textoX1.addKeyListener(this);
         panelTextos.add(new JLabel("."));
         panelTextos.add(textoX2 = new JTextField(2));
@@ -78,7 +78,7 @@ public class VentanaPrincipal extends JFrame implements MouseListener, KeyListen
         int x3=Integer.valueOf(textoX3.getText());
         int x4=Integer.valueOf(textoX4.getText());
         Ip ip = new Ip(x1, x2, x3, x4);
-        BoxLayout boxLayoutInfo = new BoxLayout(panelInformacion, BoxLayout.Y_AXIS);
+e        BoxLayout boxLayoutInfo = new BoxLayout(panelInformacion, BoxLayout.Y_AXIS);
         panelInformacion.setLayout(boxLayoutInfo);
         JLabel direccionIp;
         panelInformacion.add(direccionIp = new JLabel(ip.getDirecciónIp()));
@@ -149,6 +149,11 @@ public class VentanaPrincipal extends JFrame implements MouseListener, KeyListen
     public void keyTyped(KeyEvent ke) {
         if (!Character.isDigit(ke.getKeyChar())){
             ke.consume();
+        }else{
+            JTextField texto = (JTextField) ke.getSource();
+            if (texto.getText().length()==3){
+                ke.consume();
+            }
         }
     }
     @Override
