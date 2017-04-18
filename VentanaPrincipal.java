@@ -1,4 +1,4 @@
-package InterfazGrafica;
+﻿package InterfazGrafica;
 
 import LogicaDeNegocio.CodigoDireccion;
 import LogicaDeNegocio.Ip;
@@ -20,6 +20,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
+/*Comentario
+*/
 public class VentanaPrincipal extends JFrame implements MouseListener, KeyListener{
     private Container contenedor;
     private JLabel etiquetaDireccion;
