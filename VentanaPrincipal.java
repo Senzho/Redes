@@ -21,7 +21,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
 /*Comentario
-*/
 public class VentanaPrincipal extends JFrame implements MouseListener, KeyListener{
     private Container contenedor;
     private JLabel etiquetaDireccion;
